@@ -1,0 +1,9 @@
+CACHE MANIFEST
+
+//cdn.kik.com/kik/1.0.9/kik.js
+/js/app.min.js
+/js/zepto.js
+/css/app.min.css
+
+NETWORK:
+*
