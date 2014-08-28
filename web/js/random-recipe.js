@@ -1,14 +1,14 @@
 App.controller('random-recipe', function ($page) {
-	var $textBox = $page.querySelector('#test-field');
-	var $testButton = $page.querySelector('#test-button');
-	$testButton.addEventListener('click', function () {
+	var recipe_title = $page.querySelector('#recipe-title');
+	var recipe_button = $page.querySelector('#random-recipe-button');
+
+	recipe_button.addEventListener('click', function () {
 		console.log("Button Tapped");
-		getOneRecipe(37859, function(data){
+		getOneRecipe(getRandomRecipeID(), function(data){
 			if(data){
 				var parsed = JSON.parse(data);
-				console.log("YAY");
-				console.log(parsed.recipe);
-				$textBox.innerText = parsed.recipe.title;
+				$('#recipe-image').attr('src', parsed.recipe.image_url);
+				recipe_title.innerText = parsed.recipe.title;
 			}			
 		});	
 	});
@@ -36,5 +36,9 @@ App.controller('random-recipe', function ($page) {
 				callback(data);
 			}
 		});
+	}
+
+	function getRandomRecipeID(){
+		return Math.floor((Math.random() * 50000) + 517);
 	}
 });
