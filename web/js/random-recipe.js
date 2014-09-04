@@ -1,7 +1,6 @@
 App.controller('random-recipe', function (page) {
 
 	$(page).find('#random-recipe-button').on('click', function () {
-		console.log("Button Tapped");
 		getOneRecipe(getRandomRecipeID(), function(data){
 			if(data){
 				var parsed = JSON.parse(data);
@@ -17,8 +16,11 @@ App.controller('random-recipe', function (page) {
 
 	$(page).find('#kik-recipe-button').on('click', function(){
 		var content_title = $('#recipe-title').text();
+		var pic_url = $('#recipe-image').attr('src');
 		kik.send({
-			title: content_title
+			title: content_title,
+			pic: pic_url,
+			big: true
 		});
 	});
 
