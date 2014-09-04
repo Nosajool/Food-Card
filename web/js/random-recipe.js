@@ -15,6 +15,13 @@ App.controller('random-recipe', function (page) {
 		});	
 	});
 
+	$(page).find('#kik-recipe-button').on('click', function(){
+		var content_title = $('#recipe-title').text();
+		kik.send({
+			title: content_title
+		});
+	});
+
 
 	function getOneRecipe(id, callback){
 		API.getRecipe(id, function(data){
