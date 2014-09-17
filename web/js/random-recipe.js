@@ -1,4 +1,7 @@
 App.controller('random-recipe', function (page) {
+	$(document).ready(function(){
+		$("#recipe-section").hide();
+	});
 
 	$(page).find('#random-recipe-button').on('click', function () {
 		getOneRecipe(getRandomRecipeID(), function(data){
@@ -26,7 +29,7 @@ App.controller('random-recipe', function (page) {
 
 
 	function getOneRecipe(id, callback){
-		API.getRecipe(id, function(data){
+		API.getRecipeById(id, function(data){
 			console.log("Get One Recipe Callback: " + data);
 			if (!data | data.err){
 				App.dialog({

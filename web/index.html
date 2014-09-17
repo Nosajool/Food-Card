@@ -40,12 +40,15 @@
 				<div class="app-button right" id="kik-recipe-button">Kik it</div>
 			</div>
 			<div class="app-content">
-				<div class="app-section">
-					<div id="recipe-title">Recipe Title will be here</div>
+				<div class="app-section" id="recipe-section">
+					<label>Recipe</label>
+					<div id="recipe-title"></div>
 					<img id="recipe-image">
 					<ul class="app-list" id="ingredients">
 						<label>Ingredients</label>
 					</ul>
+				</div>
+				<div class="app-section">
 					<div class="app-button" id="random-recipe-button">Get Random Recipe</div>
 				</div>
 			</div>
@@ -55,9 +58,24 @@
 			<div class="app-topbar red">
 				<div class="app-button left" data-back data-autotitle></div>
 				<div class="app-title">Search</div>
+				<div class="app-button right" id="kik-recipe-button">Kik it</div>
 			</div>
 			<div class="app-content">
-				Search
+				<div class="app-section" id="recipe-section">
+					<label>Recipe</label>
+					<div id="recipe-title"></div>
+					<img id="recipe-image">
+					<ul class="app-list" id="ingredients">
+						<label>Ingredients</label>
+					</ul>
+				</div>
+
+				<div class="app-section">
+					<label>Search Query</label>
+					<div id="error-text"></div>
+					<input class="app-input" id="search-term" placeholder="Search Term">
+					<div class="app-button" id="search-button">Search</div>
+				</div>
 			</div>
 		</div>
 

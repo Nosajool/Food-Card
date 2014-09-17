@@ -1,6 +1,8 @@
 # Food Card
 A Kik card to share pictures and recipes of food.
 
+Go to [http://food-card.herokuapp.com/](http://food-card.herokuapp.com/) in the Kik browser.
+
 ### Local Setup
 
   1. Install Node.js (v0.8+) from [http://nodejs.org/](http://nodejs.org/)
@@ -17,13 +19,3 @@ A Kik card to share pictures and recipes of food.
 
 1. Run this command: `npm start`
 2. Go to [localhost:5000](http://localhost:5000/) in your browser to see your app
-
-
-### Kik Developer Resources
-
-All developer resources can be found on [dev.kik.com](http://dev.kik.com/).
-
-
-### Copyright and License
-
-Code released under the MIT license. Code and documentation copyright 2014 Kik Interactive, Inc.
